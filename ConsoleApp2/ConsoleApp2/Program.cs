@@ -18,6 +18,7 @@ namespace ConsoleApp1
 
         static int ConvertLetterToIndex(string letter)
         {
+            // test
             if (letter == "a")
             {
                 return 0;

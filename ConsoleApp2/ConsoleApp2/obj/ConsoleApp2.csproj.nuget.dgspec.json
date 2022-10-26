@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eskil.lithner\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {}
+    "C:\\Users\\oliver.stamnes\\Desktop\\Schakspel\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eskil.lithner\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {
+    "C:\\Users\\oliver.stamnes\\Desktop\\Schakspel\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eskil.lithner\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+        "projectUniqueName": "C:\\Users\\oliver.stamnes\\Desktop\\Schakspel\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
         "projectName": "ConsoleApp2",
-        "projectPath": "C:\\Users\\eskil.lithner\\source\\repos\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
-        "packagesPath": "C:\\Users\\eskil.lithner\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eskil.lithner\\source\\repos\\ConsoleApp2\\ConsoleApp2\\obj\\",
+        "projectPath": "C:\\Users\\oliver.stamnes\\Desktop\\Schakspel\\ConsoleApp2\\ConsoleApp2\\ConsoleApp2.csproj",
+        "packagesPath": "C:\\Users\\oliver.stamnes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oliver.stamnes\\Desktop\\Schakspel\\ConsoleApp2\\ConsoleApp2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\eskil.lithner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\oliver.stamnes\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
