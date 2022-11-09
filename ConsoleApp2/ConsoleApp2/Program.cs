@@ -104,28 +104,42 @@ namespace ConsoleApp1
                 Console.WriteLine("Write yes/no");
             }
 
-
+            //Input för position (från) t.ex. a2 
             Console.WriteLine("Enter the piece you want to move:");
             string input1 = Console.ReadLine();
+
+            //Input för position (från) t.ex. a4
             Console.WriteLine("Enter the position you want to move the piece to:");
             string input2 = Console.ReadLine();
 
+            //Definerar variabeln letter
             char letter = input1[0];
 
-            Console.WriteLine("input[1]: " + input1[1]);
+            //Definerar variabeln number
             int number = Int32.Parse(input1[1] + "");
+
+            //Writeline för att kolla värdet på number
+            Console.WriteLine("input[1]: " + input1[1]);
+            
+            //Writeline för att kolla värdet på letter
             Console.WriteLine("number: " + number);
+            
+            //Används för att konvertera letter till ett nummer som definerar kollumn 
             int letterToIndex = ConvertLetterToIndex(letter);
 
-
+            //Konverterar number till rätt rad
             int index = 8 - number;
 
+            //Writeline för att kolla värdet på det nya numret index
             Console.WriteLine("index: " + index);
 
+            //Rad defineras med hjälp av index och borderarraylist
             var rad = boardArrayList[index];
+            //Positionen defineras av 
             var position = rad[letterToIndex];
-
+            //Ersätter pjäsens ursprungliga position och gör den blank
             rad[letterToIndex] = "'";
+            
 
 
             Console.WriteLine("╻━━━━━━━━━BLACK━━━━━━━━━━╻");
