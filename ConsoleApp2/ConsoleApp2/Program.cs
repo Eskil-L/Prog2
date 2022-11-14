@@ -26,10 +26,10 @@ namespace ConsoleApp1
             var row7 = new List<string>() { "p", "p", "p", "p", "p", "p", "p", "p" };
             var row8 = new List<string>() { "t", "h", "b", "k", "q", "b", "h", "t" };
 
-          
 
 
-            
+
+
 
 
 
@@ -88,7 +88,7 @@ namespace ConsoleApp1
                 - 
 
              */
-
+        
             if (input == "yes")
             {
                 Console.WriteLine("\nThe game begins.");
@@ -99,108 +99,136 @@ namespace ConsoleApp1
                 Console.WriteLine("\nGoogle them then.");
             }
 
-            else
-            {
-                Console.WriteLine("Write yes/no");
+                else
+                {
+                Console.WriteLine("\nAnswer yes / no");
+                System.Environment.Exit(0);
             }
 
+        
             //Input för position (från) t.ex. a2 
             Console.WriteLine("Enter the piece you want to move:");
-            string input1 = Console.ReadLine();
+                string input1 = Console.ReadLine();
 
-            //Input för position (från) t.ex. a4
-            Console.WriteLine("Enter the position you want to move the piece to:");
-            string input2 = Console.ReadLine();
+                //Input för position (från) t.ex. a4
+                Console.WriteLine("Enter the position you want to move the piece to:");
+                string input2 = Console.ReadLine();
+                
+                //Definerar variabeln letter1
+                char letter1 = input1[0];
+                //Definerar variabeln letter2
+                char letter2 = input2[0];
 
-            //Definerar variabeln letter
-            char letter = input1[0];
 
-            //Definerar variabeln number
-            int number = Int32.Parse(input1[1] + "");
+                //Definerar variabeln number1
+                int number1 = Int32.Parse(input1[1] + "");
+                //Definerar variabeln number1
+                int number2 = Int32.Parse(input2[1] + "");
 
-            //Writeline för att kolla värdet på number
-            Console.WriteLine("input[1]: " + input1[1]);
-            
-            //Writeline för att kolla värdet på letter
-            Console.WriteLine("number: " + number);
-            
-            //Används för att konvertera letter till ett nummer som definerar kollumn 
-            int letterToIndex = ConvertLetterToIndex(letter);
+                //Writeline för att kolla värdet på number1
+                Console.WriteLine("input1[1]: " + input1[1]);
+                
+                //Writeline för att kolla värdet på number2
+                Console.WriteLine("input2[1]: " + input2[1]);
+                
+                //Writeline för att kolla värdet på letter
+                Console.WriteLine("number1: " + number1);
 
-            //Konverterar number till rätt rad
-            int index = 8 - number;
+                //Writeline för att kolla värdet på letter
+                Console.WriteLine("number2: " + number2);
 
-            //Writeline för att kolla värdet på det nya numret index
-            Console.WriteLine("index: " + index);
+            //Används för att konvertera letter1 till ett nummer som definerar kollumn 
+            int letterToIndex1 = ConvertLetterToIndex(letter2);
+            //Används för att konvertera letter2 till ett nummer som definerar kollumn 
+            int letterToIndex2 = ConvertLetterToIndex(letter2);
 
-            //Rad defineras med hjälp av index och borderarraylist
-            var rad = boardArrayList[index];
-            //Positionen defineras av 
-            var position = rad[letterToIndex];
+            //Konverterar number1 till rätt rad
+            int index1 = 8 - number1;
+            //Konverterar number1 till rätt rad
+            int index2 = 8 - number2;
+
+            //Writeline för att kolla värdet på det nya numret index1
+            Console.WriteLine("index: " + index1);
+            //Writeline för att kolla värdet på det nya numret index2
+            Console.WriteLine("index: " + index2);
+
+            //Rad defineras med hjälp av index1 och borderarraylist
+            var rad1 = boardArrayList[index1];
+            //Rad defineras med hjälp av index2 och borderarraylist
+            var rad2 = boardArrayList[index2];
+
+
+            var piece = rad1[letterToIndex2];
             //Ersätter pjäsens ursprungliga position och gör den blank
-            rad[letterToIndex] = "'";
-            
+            rad1[letterToIndex1] = "'";
+            //Byter ut den blanka tomma rutan mot pjäsen
+            rad2[letterToIndex2] = piece;
+
+            Console.WriteLine(piece);
+
+
 
 
             Console.WriteLine("╻━━━━━━━━━BLACK━━━━━━━━━━╻");
 
-            foreach (var row in boardArrayList)
-            {
-                Console.Write("| ");
-                foreach (var item in row)
+                foreach (var row in boardArrayList)
                 {
-                    Console.Write(item);
-                    Console.Write(" |");
+                    Console.Write("| ");
+                    foreach (var item in row)
+                    {
+                        Console.Write(item);
+                        Console.Write(" |");
+                    }
+                    Console.Write("\n");
                 }
-                Console.Write("\n");
-            }
-            Console.WriteLine("╹━━━━━━━━━WHITE━━━━━━━━━━╹");
+                Console.WriteLine("╹━━━━━━━━━WHITE━━━━━━━━━━╹");
 
-        }
+            }
 
 
-        static int ConvertLetterToIndex(char letter)
-        {
-            // test
-            if (letter == 'a')
+            static int ConvertLetterToIndex(char letter)
             {
-                return 0;
-            }
-            else if (letter == 'b')
-            {
-                return 1;
-            }
-            else if (letter == 'c')
-            {
-                return 2;
-            }
-            else if (letter == 'd')
-            {
-                return 3;
-            }
-            else if (letter == 'e')
-            {
-                return 4;
-            }
-            else if (letter == 'f')
-            {
-                return 5;
-            }
-            else if (letter == 'g')
-            {
-                return 6;
-            }
-            else if (letter == 'h')
-            {
-                return 7;
-            }
-            else
-            {
-                return -1;
+                // test
+                if (letter == 'a')
+                {
+                    return 0;
+                }
+                else if (letter == 'b')
+                {
+                    return 1;
+                }
+                else if (letter == 'c')
+                {
+                    return 2;
+                }
+                else if (letter == 'd')
+                {
+                    return 3;
+                }
+                else if (letter == 'e')
+                {
+                    return 4;
+                }
+                else if (letter == 'f')
+                {
+                    return 5;
+                }
+                else if (letter == 'g')
+                {
+                    return 6;
+                }
+                else if (letter == 'h')
+                {
+                    return 7;
+                }
+                else
+                {
+                    return -1;
+                }
             }
         }
     }
-}
+
 
 
 
